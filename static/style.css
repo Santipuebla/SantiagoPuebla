@@ -1,0 +1,138 @@
+:root {
+    --bg-color: #050505;
+    --red-glow: #ff0000;
+    --card-bg: rgba(15, 15, 15, 0.9);
+    --text-white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at center, #1a0000 0%, #050505 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    color: var(--text-white);
+    overflow-x: hidden;
+}
+
+/* Ocultar barra de scroll lateral */
+body::-webkit-scrollbar { display: none; }
+
+.main-container {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid #222;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    width: 90%;
+    max-width: 550px;
+    margin: 20px auto;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid var(--red-glow);
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--red-glow);
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+}
+
+.tech-badges {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: #111;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    border: 1px solid #333;
+}
+
+button {
+    background: var(--red-glow);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    font-family: 'Space Mono', monospace;
+}
+
+button:hover {
+    box-shadow: 0 0 20px var(--red-glow);
+    transform: translateY(-2px);
+}
+
+.terminal {
+    background: #000;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.green-text { color: #00ff00; font-size: 0.8rem; }
+
+.contact-links {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    border-top: 1px solid #222;
+    padding-top: 1.5rem;
+}
+
+.contact-links img {
+    width: 30px;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.contact-links a:hover img {
+    opacity: 1;
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px var(--red-glow));
+}
+
+.hidden { display: none; }
+
+/* --- AJUSTES PARA CELULAR --- */
+@media (max-width: 600px) {
+    .main-container {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    h1 { font-size: 1.6rem; }
+    .profile-img { width: 130px; height: 130px; }
+    .contact-links { position: static; margin-top: 20px; }
+}

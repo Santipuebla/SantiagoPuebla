@@ -1,9 +1,4 @@
-# 🌐 SantiagoPuebla-WebApp v1.0.0
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Main_Language-Python-blue?style=for-the-badge" />
-</div>
+# 🌐 SantiagoPuebla
 
 ---
 
