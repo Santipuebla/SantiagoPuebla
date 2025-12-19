@@ -1,13 +1,16 @@
-class SantiagoPuebla:
-    def __init__(self):
-        self.role = "Full Stack Developer"
-        self.location = "Mendoza, Argentina"
-        self.stack = ["Python", "JavaScript", "Css", "html"]
-        self.goal = "Transforming ideas into scalable code"
+from flask import Flask, render_template
 
-    def __str__(self):
-        return f"Hi, I'm Santiago! A {self.role} based in {self.location}."
+app = Flask(__name__)
+
+@app.route("/")
+def santiago_portfolio():
+    profile = {
+        "user": "Santiago Puebla",
+        "status": "Online",
+        "stack": ["Python", "JavaScript", "HTML5", "CSS3", "MySQL"],
+        "message": "Bienvenido a mi Web App Portfolio"
+    }
+    return f"Rendering {profile['user']}'s view... Done! 🚀"
 
 if __name__ == "__main__":
-    santi = SantiagoPuebla()
-    print(santi)
+    app.run(debug=True)
