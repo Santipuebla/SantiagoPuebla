@@ -8,43 +8,94 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="main-container">
-        <header>
-            <div class="profile-wrapper">
-                <img src="{{ url_for('static', filename='foto.jpg') }}" alt="Santiago Puebla" class="profile-img">
-                <div class="online-indicator"></div>
-            </div>
-            
-            <h1>SANTIAGO PUEBLA</h1>
-            <p class="subtitle">> <span id="typing-text"></span></p>
-            
-            <div class="tech-badges">
-                <span class="badge">PYTHON</span>
-                <span class="badge">MYSQL</span>
-                <span class="badge">JAVASCRIPT</span>
-            </div>
-
-            <button id="btn-deploy">EXPLORAR SISTEMAS</button>
-            
-            <div id="stack-content" class="hidden">
-                <div class="terminal">
-                    <p class="green-text">> SYSTEM_STATUS: ONLINE</p>
-                    <p class="green-text">> ARCHITECTURE: ESCALABLE</p>
+    <div class="app-frame">
+        <div class="main-container">
+            <header>
+                <div class="profile-wrapper">
+                    <img src="{{ url_for('static', filename='foto.jpg') }}" alt="Santiago Puebla" class="profile-img">
+                    <div class="online-indicator"></div>
                 </div>
-            </div>
-        </header>
+                
+                <h1>SANTIAGO PUEBLA</h1>
+                <p class="subtitle">> <span id="typing-text"></span></p>
+                
+                <div class="tech-badges">
+                    <span class="badge">PYTHON</span>
+                    <span class="badge">MYSQL</span>
+                    <span class="badge">JAVASCRIPT</span>
+                </div>
 
-        <footer class="contact-links">
-            <a href="https://www.linkedin.com/in/santiago-puebla-a6915a375" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://wa.me/5492612548910" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
-            </a>
-            <a href="https://github.com/Santipuebla" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
-            </a>
-        </footer>
+                <button id="btn-deploy">EXPLORAR SISTEMAS</button>
+                
+                <div id="stack-content" class="hidden">
+                    <div class="terminal">
+                        <p class="green-text">> SYSTEM_STATUS: ONLINE</p>
+                        <p class="green-text">> ARCHITECTURE: ESCALABLE</p>
+                    </div>
+                </div>
+            </header>
+
+            <section class="projects-section">
+                <h2 class="section-title">PROYECTOS_RECIENTES</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <img src="{{ url_for('static', filename='Lotengo.jpg') }}" alt="Lo Tengo">
+                        </div>
+                        <div class="project-info">
+                            <h3>LO TENGO</h3>
+                            <p>Gestión y Ventas</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/Santipuebla" target="_blank" class="btn-small">CÓDIGO</a>
+                                <a href="#" class="btn-small btn-primary">DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <img src="{{ url_for('static', filename='Gotour.jpg') }}" alt="Go Tour">
+                        </div>
+                        <div class="project-info">
+                            <h3>GO TOUR</h3>
+                            <p>Experiencias Turísticas</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/Santipuebla" target="_blank" class="btn-small">CÓDIGO</a>
+                                <a href="#" class="btn-small btn-primary">DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <img src="{{ url_for('static', filename='Argenoid.jpg') }}" alt="Arkanoid">
+                        </div>
+                        <div class="project-info">
+                            <h3>AGENOID</h3>
+                            <p>Arcade JS Engine</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/Santipuebla" target="_blank" class="btn-small">CÓDIGO</a>
+                                <a href="#" class="btn-small btn-primary">DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer class="contact-links">
+                <a href="https://www.linkedin.com/in/santiago-puebla-a6915a375" target="_blank" class="link-linkedin">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://wa.me/5492612548910" target="_blank" class="link-whatsapp">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://github.com/Santipuebla" target="_blank" class="link-github">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
+                </a>
+            </footer>
+        </div>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
